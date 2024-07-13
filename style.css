@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "gilroy";
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+#main{
+    height: 100vh;
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+}
+
+#part1{
+    width: 30vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#part1 h1{
+    color: white;
+    font-size: 3.5vw;
+}
+#buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50%;
+    cursor: pointer;
+}
+#buttons h1{
+    font-size: 2vw;
+}
+#buttons:hover{
+    background-color: #413c3c;
+}
+
+#container{
+    position: relative;
+    height: 30vw;
+    width: 30vw;
+    background-color: #1e1b1b;
+    display: flex;
+    flex-wrap: wrap;
+    user-select: none;
+    overflow: hidden;
+}
+
+#msg-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    z-index: -1;
+    color: #fff;
+}
+#msg-container button{
+    padding: 0.8vw 0.5vw;
+    font-size: 1vw;
+    font-weight: 600;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    transition: all ease 0.5s;
+}
+
+#msg-container button:hover{
+    background-color: #000;
+    color: #fff;
+}
+
+#cell-container{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cell{
+    height: 10vw;
+    width: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+}
+
+.cell h1{
+    font-size: 3vw;
+}
+
+.cell1, .cell4, .cell7, .cell2, .cell5, .cell8{
+    border-right: 1px solid #dadada;
+}
+.cell1, .cell2, .cell3, .cell4, .cell5, .cell6{
+    border-bottom: 1px solid #dadada;
+}
+
+.cell:hover{
+    background-color: #413c3c;
+}
+
+@media (max-width:600px){
+    #main{
+        justify-content: start;
+        align-items: start;
+        padding-top: 2vh;
+        gap: 10vh;
+    }
+    #part1{
+        width: 100%;
+        padding: 0 2vw;
+    }
+    #part1 h1{
+        font-size: 6vh;
+    }
+    #buttons{
+        height: 6vh;
+        width: 6vh;
+    }
+    #buttons h1{
+        font-size: 5vh;
+    }
+    
+    #container{
+        height: 60vh;
+        width: 100%;
+        background-color: #000;
+        padding: 0 0.5vw;
+    }
+    
+    #msg-container{
+        gap: 1vh;
+    }
+    #msg-container button{
+        padding: 1vh 0.5vh;
+        font-size: 2vh;
+    }
+    
+    .cell{
+        height: 20vh;
+        width: 33vw;
+    }
+
+    .cell h1{
+        font-size: 8vh;
+    }
+}
